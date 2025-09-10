@@ -1,4 +1,4 @@
-# SR_2025
+# Science Reach Project 2025: Testing the Effect of Various Machine Learning Algorithms on Resultant Fraud Detection Accuracy
 
 Our experiment performs a comparative analysis of various machine learning models and their accuracy on fraud detection–as measured through recall and success rate- with the goal of improving fraud prevention capabilities in modern digital security systems. Millions of Americans are victims of financial fraud, and our paper aims to analyze existing fraud detection systems using various machine learning techniques and create a framework for our own system which will be available for public use. 
 
