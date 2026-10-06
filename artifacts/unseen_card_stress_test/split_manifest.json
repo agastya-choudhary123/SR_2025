@@ -1,0 +1,32 @@
+{
+  "protocol": "card1-grouped 60/20/20 using nested StratifiedGroupKFold",
+  "seeds": {
+    "outer": 42,
+    "inner": 43
+  },
+  "group_overlap_assertions": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "rows": {
+    "train_source": 354323,
+    "validation": 118109,
+    "locked_test": 118108
+  },
+  "card1_groups": {
+    "train_source": 8136,
+    "validation": 2713,
+    "locked_test": 2704
+  },
+  "fraud_rates": {
+    "train_source": 0.03499067235262741,
+    "validation": 0.03498463283915705,
+    "locked_test": 0.0349933958749619
+  },
+  "transaction_id_sha256": {
+    "train_source": "54d11eca535a6023c841f7e5cb745f0e068c173b485bfc5c5d4065a30bc2ffb4",
+    "validation": "e54aa341cdfac2e8f3065358c378ffd40aa470ac2d194f77e19cd228944698c9",
+    "locked_test": "dcae17f4066fbcd863e623f94e950825fd6c1adf8ab4e616c688ab419c276f26"
+  }
+}

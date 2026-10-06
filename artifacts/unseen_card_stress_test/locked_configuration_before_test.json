@@ -1,0 +1,21 @@
+{
+  "best_trial": 11,
+  "best_params": {
+    "learning_rate": 0.025168049420539535,
+    "num_leaves": 112,
+    "max_depth": 12,
+    "min_data_in_leaf": 207,
+    "feature_fraction": 0.6620829788403851,
+    "bagging_fraction": 0.7411331492955989,
+    "lambda_l1": 0.008643808036023161,
+    "lambda_l2": 1.4560498994268871,
+    "min_gain_to_split": 0.2770204390438237,
+    "scale_pos_weight": 1.2264900351798909
+  },
+  "best_validation_auc": 0.8409753962181242,
+  "final_best_iteration": 33,
+  "operating_threshold": 0.01986212805323254,
+  "threshold_policy": "target 92% recall on card1-disjoint validation groups",
+  "threshold_at_validation_5pct_fpr": 0.03466238479947671,
+  "test_predictions_made_before_this_file": false
+}

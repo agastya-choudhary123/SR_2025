@@ -1,0 +1,108 @@
+{
+  "evaluation_integrity": {
+    "test_card1_overlap_with_train": 0,
+    "test_used_for_preprocessing": false,
+    "test_used_for_synthesis": false,
+    "test_used_for_optuna": false,
+    "test_used_for_early_stopping": false,
+    "test_used_for_threshold_selection": false,
+    "test_scored_once_after_configuration_lock": true
+  },
+  "split_manifest": {
+    "protocol": "card1-grouped 60/20/20 using nested StratifiedGroupKFold",
+    "seeds": {
+      "outer": 42,
+      "inner": 43
+    },
+    "group_overlap_assertions": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "rows": {
+      "train_source": 354323,
+      "validation": 118109,
+      "locked_test": 118108
+    },
+    "card1_groups": {
+      "train_source": 8136,
+      "validation": 2713,
+      "locked_test": 2704
+    },
+    "fraud_rates": {
+      "train_source": 0.03499067235262741,
+      "validation": 0.03498463283915705,
+      "locked_test": 0.0349933958749619
+    },
+    "transaction_id_sha256": {
+      "train_source": "54d11eca535a6023c841f7e5cb745f0e068c173b485bfc5c5d4065a30bc2ffb4",
+      "validation": "e54aa341cdfac2e8f3065358c378ffd40aa470ac2d194f77e19cd228944698c9",
+      "locked_test": "dcae17f4066fbcd863e623f94e950825fd6c1adf8ab4e616c688ab419c276f26"
+    }
+  },
+  "synthetic_training": {
+    "rows": 568630,
+    "fraud_rate": 0.0349911190053286,
+    "exact_source_row_matches": 0,
+    "method": "class-conditional high-fidelity kernel bootstrap",
+    "numeric_noise": "0.05% training IQR",
+    "categorical_crossover_probability": 0.02
+  },
+  "optimization": {
+    "best_trial": 11,
+    "best_params": {
+      "learning_rate": 0.025168049420539535,
+      "num_leaves": 112,
+      "max_depth": 12,
+      "min_data_in_leaf": 207,
+      "feature_fraction": 0.6620829788403851,
+      "bagging_fraction": 0.7411331492955989,
+      "lambda_l1": 0.008643808036023161,
+      "lambda_l2": 1.4560498994268871,
+      "min_gain_to_split": 0.2770204390438237,
+      "scale_pos_weight": 1.2264900351798909
+    },
+    "best_validation_auc": 0.8409753962181242,
+    "final_best_iteration": 33,
+    "operating_threshold": 0.01986212805323254,
+    "threshold_policy": "target 92% recall on card1-disjoint validation groups",
+    "threshold_at_validation_5pct_fpr": 0.03466238479947671,
+    "test_predictions_made_before_this_file": false
+  },
+  "validation": {
+    "roc_auc": 0.8409753962181242,
+    "pr_auc": 0.42816816888821035,
+    "recall_at_5pct_fpr": 0.5024201355275896
+  },
+  "locked_test_at_validation_92pct_recall_threshold": {
+    "roc_auc": 0.8742866289427744,
+    "pr_auc": 0.4815989166451494,
+    "threshold": 0.01986212805323254,
+    "recall": 0.9578998306315025,
+    "precision": 0.05156895181774368,
+    "false_positive_rate": 0.6388418512831762,
+    "specificity": 0.3611581487168239,
+    "confusion_matrix": {
+      "tn": 41163,
+      "fp": 72812,
+      "fn": 174,
+      "tp": 3959
+    }
+  },
+  "locked_test_at_validation_5pct_fpr_threshold": {
+    "roc_auc": 0.8742866289427744,
+    "pr_auc": 0.4815989166451494,
+    "threshold": 0.03466238479947671,
+    "recall": 0.6131139608032906,
+    "precision": 0.24775127102072741,
+    "false_positive_rate": 0.06750603202456679,
+    "specificity": 0.9324939679754332,
+    "confusion_matrix": {
+      "tn": 106281,
+      "fp": 7694,
+      "fn": 1599,
+      "tp": 2534
+    }
+  },
+  "runtime_seconds": 58.35917592048645
+}

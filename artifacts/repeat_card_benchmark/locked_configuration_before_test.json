@@ -1,0 +1,58 @@
+{
+  "selected_synthetic_fraud_fraction": 0.035,
+  "augmentation_screening": [
+    {
+      "synthetic_fraud_fraction": 0.035,
+      "validation_auc": 0.9696529482234882,
+      "best_iteration": 961
+    },
+    {
+      "synthetic_fraud_fraction": 0.1,
+      "validation_auc": 0.9690427015275752,
+      "best_iteration": 1187
+    },
+    {
+      "synthetic_fraud_fraction": 0.25,
+      "validation_auc": 0.9684381590042896,
+      "best_iteration": 968
+    },
+    {
+      "synthetic_fraud_fraction": 0.5,
+      "validation_auc": 0.9687012536177154,
+      "best_iteration": 1278
+    }
+  ],
+  "best_trial": 16,
+  "best_params": {
+    "learning_rate": 0.023215180591616577,
+    "num_leaves": 177,
+    "max_depth": 15,
+    "min_data_in_leaf": 108,
+    "feature_fraction": 0.7100604360946486,
+    "bagging_fraction": 0.9734239233555472,
+    "lambda_l1": 0.0011452126121577974,
+    "lambda_l2": 0.0003332516306493827,
+    "min_gain_to_split": 0.0804859161658962,
+    "scale_pos_weight": 1.2823852686515433
+  },
+  "best_optuna_validation_auc": 0.9718945394647492,
+  "final_best_iteration": 2399,
+  "operating_threshold": 0.003636576947288376,
+  "threshold_policy": "target 92% recall on real validation",
+  "validation_metrics": {
+    "roc_auc": 0.9719153797560358,
+    "pr_auc": 0.865457778793932,
+    "threshold": 0.003636576947288376,
+    "recall": 0.9201548511976773,
+    "precision": 0.27154587647268835,
+    "false_positive_rate": 0.08951085764422022,
+    "specificity": 0.9104891423557798,
+    "confusion_matrix": {
+      "tn": 103773,
+      "fp": 10202,
+      "fn": 330,
+      "tp": 3803
+    }
+  },
+  "test_predictions_made_before_this_file": false
+}

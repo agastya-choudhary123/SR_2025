@@ -1,0 +1,33 @@
+{
+  "evaluation_question": "repeat-card, same-population transaction generalization",
+  "split": "stratified random rows, 60/20/20",
+  "seed": 20251006,
+  "rows": {
+    "real_train": 354324,
+    "real_validation": 118108,
+    "locked_real_test": 118108,
+    "synthetic_training_addition": 40000
+  },
+  "test_transaction_id_sha256": "5a09220f1f1f7c66e45c54f0f04a188ba81eb63d14c4e930720ecf06a2ae98c3",
+  "synthetic_fraud_fraction_candidates": [
+    0.035,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "selection_metric": "real validation ROC-AUC",
+  "optuna_trials": 20,
+  "threshold_policy": "target 92% recall on real validation",
+  "test_contract": "no test transformation, prediction, or metric until final configuration lock",
+  "excluded_columns": [
+    "transaction_id",
+    "transaction_ts",
+    "card1_historical_fraud_rate",
+    "email_historical_fraud_rate",
+    "card1_txn_count",
+    "card1_avg_amt",
+    "email_txn_count",
+    "is_high_risk_product",
+    "amt_vs_card_avg_ratio"
+  ]
+}
