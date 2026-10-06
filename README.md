@@ -1,12 +1,26 @@
-# Science Reach Project 2025: Testing the Effect of Various Machine Learning Algorithms on Resultant Fraud Detection Accuracy
+# Science Reach 2025: comparing ML models for fraud detection
 
-Our experiment performs a comparative analysis of various machine learning models and their accuracy on fraud detection–as measured through recall and success rate- with the goal of improving fraud prevention capabilities in modern digital security systems. Millions of Americans are victims of financial fraud, and our paper aims to analyze existing fraud detection systems using various machine learning techniques and create a framework for our own system which will be available for public use. 
+Our Science Reach 2025 project. We compared how well different machine
+learning models detect fraud in financial transactions, using recall and
+overall accuracy.
 
-Procedure:
-A synthetic dataset of financial transactions was obtained from Kaggle, a data science platform. This dataset was collected, cleaned, preprocessed, and then loaded into DataRobot, a modeling and testing software for machine learning model blueprints. Through DataRobot, we were able to classify the data to efficiently run a comparative analysis of various supervised ensemble models, deep learning models, neural networks, and more. Each model’s accuracy of fraud detection was calculated through confusion matrices–this valuable information provided us with a complete analysis of how the model learned and evaluated each transaction. Confidence interval analysis of the result was then performed, which allowed us to assess the reliability, validity, and robustness of each model.
+## What we did
 
-Extension:
+1. Got a synthetic financial transactions dataset from Kaggle, then cleaned
+   and preprocessed it.
+2. Trained and compared a range of models in DataRobot (ensembles, neural
+   networks, and others), scoring each with its confusion matrix and
+   checking the results with confidence intervals.
+3. Built our own model with LightGBM, tuned with Optuna and trained with early
+   stopping to limit overfitting. That model is the notebook in this repo.
 
-Upon receiving and understanding the results, we developed our own machine learning model using the excellent LightGBM gradient boosting framework and the Optuna optimization library. Our model performed at a 99.98% accuracy level. Due to the possible risk of overfitting, we used early stopping mechanisms to ensure that the model didn't rely too much on the training data. Further plans involve potential involvement of quantum machine learning methods to implement real-time detection and help uncover more subtle and unique patterns that classical computers do not have the capability to figure out yet.
+The LightGBM model reached 99.98% accuracy. Fraud datasets are usually very imbalanced, so
+accuracy on its own overstates how good a model is. Recall on the fraud class
+is the number that matters more.
 
+A possible next step is trying quantum machine learning methods for this
+problem.
 
+## Files
+
+- `Fraud_Detection_Model.ipynb`: the LightGBM model (runs in Colab)
